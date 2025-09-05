@@ -96,5 +96,3 @@ Follow these instructions to get a copy of the project up and running on your lo
     npm run dev
     ```
     The frontend will be running at `http://localhost:5173`.
-
-## Project Structure
