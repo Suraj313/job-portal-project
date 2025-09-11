@@ -2,10 +2,9 @@
 
 A dynamic and modern job board built from the ground up, featuring a responsive React frontend and a robust Django REST Framework backend. This application allows users to browse, search, and view job listings, with a secure JWT-based system for user authentication.
 
-![Job Portal Screenshot](<LINK_TO_YOUR_SCREENSHOT_HERE>)
-*Note: You can add a screenshot of your app to your project folder and link it here.*
 
----
+
+
 
 ## Table of Contents
 
