@@ -4,13 +4,12 @@ import axios from 'axios';
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-    // ... (no changes to state or other functions)
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
 
     const api = axios.create({
         baseURL: 'http://127.0.0.1:8000/api',
-        withCredentials: true 
+        withCredentials: true
     });
 
     useEffect(() => {
@@ -25,18 +24,15 @@ export const AuthProvider = ({ children }) => {
         setUser(response.data.user);
     };
 
-    // --- THIS IS THE CORRECTED SIGNUP FUNCTION ---
-const signup = async (email, password, password2) => {
-    await api.post('/auth/registration/', { 
-        email, 
-        username: email, 
-        password1: password,
-        password2: password2 
-    });
-    // This is the corrected line
-    // The login function needs the original password
-    await login(email, password); 
-};
+    const signup = async (email, password, password2) => {
+        await api.post('/auth/registration/', {
+            email,
+            username: email,
+            password1: password,
+            password2: password2
+        });
+        await login(email, password);
+    };
 
     const logout = async () => {
         await api.post('/auth/logout/');
