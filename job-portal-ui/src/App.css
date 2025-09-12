@@ -40,3 +40,14 @@
 .read-the-docs {
   color: #888;
 }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-800 antialiased;
+  }
+}
+@layer components {
+  .btn-primary {
+    @apply px-4 py-2 bg-brand-primary text-white font-bold rounded-lg shadow-md hover:bg-brand-dark transition-all duration-300;
+  }
+}
