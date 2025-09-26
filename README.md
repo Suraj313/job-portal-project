@@ -6,15 +6,6 @@ A dynamic and modern job board built from the ground up, featuring a responsive 
 
 
 
-## Table of Contents
-
-- [Key Features](#key-features)
-- [Tech Stack](#tech-stack)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Backend Setup](#backend-setup)
-  - [Frontend Setup](#frontend-setup)
-- [Project Structure](#project-structure)
 
 
 ## Key Features
