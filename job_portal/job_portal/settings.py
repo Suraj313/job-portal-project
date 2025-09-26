@@ -61,7 +61,6 @@ REST_FRAMEWORK = {
 REST_AUTH = {
     'USE_JWT': True,
     'JWT_AUTH_HTTPONLY': True,
-    # --- Add the lines below ---
     'REGISTER_SERIALIZERS': {
         'REGISTER_SERIALIZER': 'jobs.serializers.CustomRegisterSerializer',
     }
@@ -69,13 +68,10 @@ REST_AUTH = {
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-# --- For Development Only: Simplified Password Rules ---
-# WARNING: These settings are insecure and should NOT be used in production.
+
 ACCOUNT_PASSWORD_MINIMUM_LENGTH = 1
 ACCOUNT_PASSWORD_VALIDATORS = []
-# settings.py
 
-# ... other settings at the bottom
 
 AUTHENTICATION_BACKENDS = (
     'allauth.account.auth_backends.AuthenticationBackend',
@@ -83,8 +79,8 @@ AUTHENTICATION_BACKENDS = (
 )
 
 
-# New Allauth settings
+#
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_UNIQUE_EMAIL = True
-ACCOUNT_USERNAME_REQUIRED = False # We don't need a separate username
+ACCOUNT_USERNAME_REQUIRED = False 
